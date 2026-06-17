@@ -229,7 +229,7 @@ window.addEventListener('DOMContentLoaded', () => {
       persistState();
       
       // Navigate to configurator page
-      window.location.href = 'configurator.html';
+      window.location.href = 'configurator.html?v=2.0';
     });
   }
 
@@ -244,7 +244,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // 3. Configurator Checkout Redirect (only if on configurator.html)
   if (dom.checkoutTriggerBtn) {
     dom.checkoutTriggerBtn.addEventListener('click', () => {
-      window.location.href = 'checkout.html';
+      window.location.href = 'checkout.html?v=2.0';
     });
   }
 
