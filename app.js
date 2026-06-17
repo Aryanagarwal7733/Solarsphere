@@ -271,6 +271,35 @@ window.addEventListener('DOMContentLoaded', () => {
     nextStep(1); // Start checkout at step 1
   }
 
+  // 6. Contact Inquiry Submit Listener (only if on contact.html)
+  const contactForm = document.getElementById('contact-inquiry-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      const email = document.getElementById('contact-email').value;
+      const phone = document.getElementById('contact-phone').value;
+      const sysSize = document.getElementById('contact-system-size').value;
+
+      const container = document.getElementById('contact-form-container');
+      if (container) {
+        container.innerHTML = `
+          <div class="success-view" style="padding: 3rem 1.5rem;">
+            <div class="success-icon">✓</div>
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Message Sent!</h3>
+            <p style="color: var(--color-text-muted); margin-bottom: 2rem;">Thank you for contacting solarsphere, <strong>${name}</strong>. Our regional empanelled solar engineer will call you at <strong>${phone}</strong> shortly to review site feasibility and net metering rules.</p>
+            <div class="success-details" style="text-align: left; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-light); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem;">
+              <div class="success-row" style="display: flex; justify-content: space-between; padding: 0.5rem 0; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.05);"><span class="success-label" style="color: var(--color-text-muted);">Channel:</span><span class="success-value" style="font-weight: 600;">Regional Partner Support</span></div>
+              <div class="success-row" style="display: flex; justify-content: space-between; padding: 0.5rem 0; font-size: 0.9rem; border-bottom: 1px solid rgba(255,255,255,0.05);"><span class="success-label" style="color: var(--color-text-muted);">Email:</span><span class="success-value" style="font-weight: 600;">${email}</span></div>
+              <div class="success-row" style="display: flex; justify-content: space-between; padding: 0.5rem 0; font-size: 0.9rem; border-bottom: none;"><span class="success-label" style="color: var(--color-text-muted);">Sizing Preference:</span><span class="success-value" style="font-weight: 600; text-transform: uppercase;">${sysSize} Setup</span></div>
+            </div>
+            <a href="index.html?v=2.0" class="btn btn-primary" style="margin-top: 1rem;">Back to Homepage</a>
+          </div>
+        `;
+      }
+    });
+  }
+
   // Initial runs
   if (dom.estSize) calculateSolar();
   if (dom.heroDialVal) updateHeroDial();

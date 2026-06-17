@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with the solarsphere team. Contact us for inquiries about custom residential solar setups, PM Surya Ghar subsidies, or support.">
+  <title>Contact Us | solarsphere</title>
+  <link rel="stylesheet" href="styles.css?v=2.0">
+</head>
+<body>
+
+  <!-- Background Glowing Orbs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html?v=2.0" class="logo">
+        <div class="logo-icon">s</div>
+        <span>solarsphere</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="calculator.html?v=2.0">Savings Calculator</a></li>
+        <li><a href="configurator.html?v=2.0">Solar Systems</a></li>
+        <li><a href="visualizer.html?v=2.0">Energy Flow</a></li>
+        <li><a href="subsidies.html?v=2.0">Govt. Subsidies</a></li>
+        <li><a href="faq.html?v=2.0">FAQs</a></li>
+        <li><a href="contact.html?v=2.0" class="active">Contact Us</a></li>
+      </ul>
+      <a href="calculator.html?v=2.0" class="btn btn-secondary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;">Get Quick Quote</a>
+    </div>
+  </header>
+
+  <!-- CONTACT US SECTION -->
+  <section class="contact-section" style="min-height: 85vh; padding-top: 150px; padding-bottom: 100px;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Connect with solarsphere</h2>
+        <p>Have questions about rooftop installations, net metering, or subsidies? Our engineering specialists are here to guide you.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left Column: Contact Details -->
+        <div class="contact-info-panel">
+          <div class="glass-card contact-card">
+            <div class="contact-item">
+              <div class="contact-icon-wrapper">📞</div>
+              <div class="contact-text-wrapper">
+                <h4>Hotline Channels</h4>
+                <p><a href="tel:+912261234567">+91 22 6123-4567</a></p>
+                <p><a href="tel:+919876543210">+91 98765-43210</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-wrapper">✉️</div>
+              <div class="contact-text-wrapper">
+                <h4>Email Support</h4>
+                <p><a href="mailto:hello@solarsphere.in">hello@solarsphere.in</a></p>
+                <p><a href="mailto:support@solarsphere.in">support@solarsphere.in</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-wrapper">📍</div>
+              <div class="contact-text-wrapper">
+                <h4>Corporate Headquarters</h4>
+                <p>Level 8, BKC Executive Hub,</p>
+                <p>G-Block, Bandra Kurla Complex,</p>
+                <p>Mumbai, MH, India - 400051</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-wrapper">🕒</div>
+              <div class="contact-text-wrapper">
+                <h4>Support Hours</h4>
+                <p>Monday – Saturday: 9:00 AM – 7:00 PM IST</p>
+                <p>Emergency On-Call: 24/7 Grid Support</p>
+              </div>
+            </div>
+
+            <div class="contact-socials-wrapper">
+              <a href="#" class="social-btn">𝕏</a>
+              <a href="#" class="social-btn">📷</a>
+              <a href="#" class="social-btn">💼</a>
+              <a href="#" class="social-btn">🎥</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Form -->
+        <div class="contact-form-panel">
+          <div class="glass-card" id="contact-form-container" style="height: 100%;">
+            <form id="contact-inquiry-form" onsubmit="submitContactForm(event)">
+              <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Send an Inquiry</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Fill out the form below and our regional empanelled solar partner will reach out for a preliminary site feasibility survey.</p>
+
+              <div class="checkout-row">
+                <div class="checkout-form-group">
+                  <label for="contact-name">Full Name</label>
+                  <input type="text" id="contact-name" class="checkout-input" placeholder="Marcus Chen" required>
+                </div>
+                <div class="checkout-form-group">
+                  <label for="contact-phone">Mobile Number</label>
+                  <input type="tel" id="contact-phone" class="checkout-input" placeholder="+91 98765-43210" required>
+                </div>
+              </div>
+
+              <div class="checkout-form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" class="checkout-input" placeholder="marcus@example.com" required>
+              </div>
+
+              <div class="checkout-form-group">
+                <label for="contact-system-size">Interested Solar System Size</label>
+                <select id="contact-system-size" class="checkout-input" style="appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%2210%22><polygon points=%220,2 10,2 5,8%22 fill=%22white%22/></svg>'); background-repeat: no-repeat; background-position: right 1.2rem center; background-size: 10px;">
+                  <option value="starter">Sphere Starter (3 kW)</option>
+                  <option value="premium" selected>Sphere Premium (5 kW)</option>
+                  <option value="elite">Sphere Elite Off-Grid (10 kW)</option>
+                  <option value="custom">Custom Sizing (Not sure)</option>
+                </select>
+              </div>
+
+              <div class="checkout-form-group">
+                <label for="contact-message">Your Message</label>
+                <textarea id="contact-message" class="checkout-input" rows="4" placeholder="Ask about roof area requirements, billing offsets, net meters, or custom additions..." style="resize: none;" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 1rem;">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <span>&copy; 2026 solarsphere Inc. All rights reserved. Designed for clean independence.</span>
+        <div class="footer-socials">
+          <a href="#">𝕏</a>
+          <a href="#">📷</a>
+          <a href="#">💼</a>
+          <a href="#">🎥</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=2.0"></script>
+</body>
+</html>
