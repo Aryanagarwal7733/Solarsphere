@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your solar energy production savings and payback period in India with the solarsphere customizer savings calculator.">
+  <title>Solar Savings Calculator | solarsphere</title>
+  <link rel="stylesheet" href="styles.css?v=2.0">
+</head>
+<body>
+
+  <!-- Background Glowing Orbs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">s</div>
+        <span>solarsphere</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="calculator.html" class="active">Savings Calculator</a></li>
+        <li><a href="configurator.html">Solar Systems</a></li>
+        <li><a href="visualizer.html">Energy Flow</a></li>
+        <li><a href="subsidies.html">Govt. Subsidies</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+      <a href="calculator.html" class="btn btn-secondary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;">Get Quick Quote</a>
+    </div>
+  </header>
+
+  <!-- SOLAR CALCULATOR -->
+  <section class="calculator" id="calculator" style="min-height: 85vh; padding-top: 150px; padding-bottom: 100px;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Personalized Savings Calculator</h2>
+        <p>Estimate your optimal solar system capacity size, annual savings, and payback period under the PM Surya Ghar national subsidy scheme.</p>
+      </div>
+
+      <div class="calc-grid">
+        <div class="glass-card calc-inputs">
+          <div class="input-toggle-container">
+            <button class="toggle-btn active" id="calc-toggle-bill" onclick="switchCalcMode('bill')">Calculate by Bill (₹)</button>
+            <button class="toggle-btn" id="calc-toggle-units" onclick="switchCalcMode('units')">Calculate by Units (kWh)</button>
+          </div>
+
+          <div class="input-group" id="group-bill">
+            <div class="input-header">
+              <label class="input-label" for="bill-slider">Avg. Monthly Electricity Bill</label>
+              <span class="input-value-display" id="bill-display">₹5,000</span>
+            </div>
+            <input type="range" class="range-slider" id="bill-slider" min="1000" max="25000" step="500" value="5000">
+          </div>
+
+          <div class="input-group" id="group-units" style="display: none;">
+            <div class="input-header">
+              <label class="input-label" for="units-slider">Avg. Monthly Unit Consumption</label>
+              <span class="input-value-display" id="units-display">600 kWh</span>
+            </div>
+            <input type="range" class="range-slider" id="units-slider" min="100" max="3000" step="50" value="600">
+          </div>
+
+          <div class="input-group">
+            <div class="input-header">
+              <label class="input-label" for="sunlight-slider">Avg. Daily Sunlight Exposure</label>
+              <span class="input-value-display" id="sunlight-display">5.0 Hrs</span>
+            </div>
+            <input type="range" class="range-slider" id="sunlight-slider" min="3.0" max="8.0" step="0.5" value="5.0">
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Roof Material & Structural Type</label>
+            <div class="roof-selector">
+              <label class="roof-card active" id="roof-shingle">
+                <input type="radio" name="rooftype" value="shingle" checked>
+                <span class="roof-icon">🏠</span>
+                <span>Asphalt Shingle</span>
+              </label>
+              <label class="roof-card" id="roof-metal">
+                <input type="radio" name="rooftype" value="metal">
+                <span class="roof-icon">🏗️</span>
+                <span>Metal Standing</span>
+              </label>
+              <label class="roof-card" id="roof-tile">
+                <input type="radio" name="rooftype" value="tile">
+                <span class="roof-icon">🧱</span>
+                <span>Clay / Concrete</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card calc-outputs">
+          <div class="calc-outputs-header">
+            <h3>Your Solar Estimates</h3>
+            <div class="subsidy-badge-mini">
+              <span class="badge-icon">🏛️</span>
+              <span>PM Surya Ghar Eligible</span>
+            </div>
+          </div>
+          
+          <div class="outputs-grid">
+            <div class="output-box box-size">
+              <span class="output-label">System Capacity</span>
+              <div class="output-value" id="est-size">4.2 kW</div>
+              <span class="output-sub">approx. 11 Premium Panels</span>
+            </div>
+
+            <div class="output-box box-savings">
+              <span class="output-label">Annual Savings</span>
+              <div class="output-value" id="est-savings">₹52,800</div>
+              <span class="output-sub">over 25 years: ₹13,20,000</span>
+            </div>
+
+            <div class="output-box box-payback">
+              <span class="output-label">Payback Period</span>
+              <div class="output-value" id="est-payback">5.2 Yrs</div>
+              <span class="output-sub">including PM Surya Ghar subsidy</span>
+            </div>
+
+            <div class="output-box box-offset">
+              <span class="output-label">Carbon Offset</span>
+              <div class="output-value" id="est-offset">3.2 Tons</div>
+              <span class="output-sub">equivalent to 82 trees planted / yr</span>
+            </div>
+          </div>
+
+          <button class="btn btn-gold" id="calc-cta-btn" style="width: 100%;">Configure System & Get Final Price</button>
+          <p class="calc-note">Calculations are based on average Indian grid parameters, slabs, and PM Surya Ghar subsidies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <span>&copy; 2026 solarsphere Inc. All rights reserved. Designed for clean independence.</span>
+        <div class="footer-socials">
+          <a href="#">𝕏</a>
+          <a href="#">📷</a>
+          <a href="#">💼</a>
+          <a href="#">🎥</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=2.0"></script>
+</body>
+</html>

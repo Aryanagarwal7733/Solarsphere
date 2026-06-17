@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore and purchase high-efficiency, premium solar setups with solarsphere. Calculate your savings, customize your off-grid system, and schedule a professional installation.">
+  <title>solarsphere | Premium Home Solar & Energy Storage Systems</title>
+  <link rel="stylesheet" href="styles.css?v=2.0">
+</head>
+<body>
+
+  <!-- Background Glowing Orbs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">s</div>
+        <span>solarsphere</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="calculator.html">Savings Calculator</a></li>
+        <li><a href="configurator.html">Solar Systems</a></li>
+        <li><a href="visualizer.html">Energy Flow</a></li>
+        <li><a href="subsidies.html">Govt. Subsidies</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+      <a href="calculator.html" class="btn btn-secondary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;">Get Quick Quote</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>Power Your Home With <span class="text-gradient">Infinite Clean Energy</span></h1>
+        <p>Design, customize, and install high-performance smart solar systems. Calculate your immediate lifetime savings and break free from rising utility rates.</p>
+        
+        <div class="hero-buttons">
+          <a href="configurator.html" class="btn btn-primary">Configure Setup</a>
+          <a href="calculator.html" class="btn btn-secondary">Calculate Savings</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <h3>12,400+</h3>
+            <p>Homes Powered</p>
+          </div>
+          <div class="hero-stat-item">
+            <h3>₹18 Cr+</h3>
+            <p>Annual Savings</p>
+          </div>
+          <div class="hero-stat-item">
+            <h3>25-Yr</h3>
+            <p>System Warranty</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="glass-card hero-card">
+          <div class="hero-card-header">
+            <h3>System Status</h3>
+            <span class="badge" id="hero-status-badge">Active</span>
+          </div>
+
+          <div class="energy-dial">
+            <svg class="dial-svg" width="180" height="180" viewBox="0 0 160 160">
+              <defs>
+                <linearGradient id="emerald-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#34d399" />
+                  <stop offset="100%" stop-color="#10b981" />
+                </linearGradient>
+              </defs>
+              <circle class="dial-bg" cx="80" cy="80" r="70" />
+              <circle class="dial-fill" id="hero-dial-fill" cx="80" cy="80" r="70" />
+            </svg>
+            <div class="dial-text">
+              <div class="dial-value" id="hero-dial-val">5.8</div>
+              <div class="dial-label">kW Output</div>
+            </div>
+          </div>
+
+          <div class="quick-customizer">
+            <div class="quick-customizer-item">
+              <span>Simulate Peak Sunlight</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="peak-sun-toggle" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="quick-customizer-item">
+              <span>Engage SphereCell Battery</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="battery-toggle" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div style="text-align: center; margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-text-muted);" id="hero-helper-txt">
+              Generating clean solar power. Excess is charging the battery.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES CALLOUT SECTION -->
+  <section class="testimonials" style="background: rgba(255, 255, 255, 0.01); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); padding: 5rem 0;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 3rem;">
+        <h2>Smart Solar Ecosystem</h2>
+        <p>Explore solarsphere's full capabilities across our dedicated modules.</p>
+      </div>
+      <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+        <div class="glass-card" style="text-align: center; padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📊</div>
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Savings Calculator</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Input your utility bill or units to size your panel arrays and estimate subsidies.</p>
+          <a href="calculator.html" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Go to Calculator</a>
+        </div>
+        <div class="glass-card" style="text-align: center; padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Customizer Systems</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Choose from our optimized tiers and configure upgrades like battery packs and EV chargers.</p>
+          <a href="configurator.html" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Explore Systems</a>
+        </div>
+        <div class="glass-card" style="text-align: center; padding: 2rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📜</div>
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.25rem;">Govt. Subsidies</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Understand national PM Surya Ghar guidelines, eligibility, and direct bank transfer steps.</p>
+          <a href="subsidies.html" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">View Subsidies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo footer-logo">
+            <div class="logo-icon">s</div>
+            <span>solarsphere</span>
+          </a>
+          <p>Accelerating the global transition to decentralised, clean energy with premium, smart-home solar setups.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Solar Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="configurator.html">Starter System (3 kW)</a></li>
+            <li><a href="configurator.html">Premium System (5 kW)</a></li>
+            <li><a href="configurator.html">Elite Off-Grid (10 kW)</a></li>
+            <li><a href="configurator.html">SphereCell Batteries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="calculator.html">Savings Calculator</a></li>
+            <li><a href="visualizer.html">Dynamic Flow Demo</a></li>
+            <li><a href="subsidies.html">Govt. Subsidies</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Join the Grid</h4>
+          <p>Get energy insights, product upgrades, and net-metering advice delivered monthly.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to solarsphere Newsletter!');">
+            <input type="email" placeholder="Your Email Address" class="newsletter-input" required>
+            <button class="btn btn-primary" style="padding: 0 1.5rem;">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 solarsphere Inc. All rights reserved. Designed for clean independence.</span>
+        <div class="footer-socials">
+          <a href="#">𝕏</a>
+          <a href="#">📷</a>
+          <a href="#">💼</a>
+          <a href="#">🎥</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=2.0"></script>
+</body>
+</html>

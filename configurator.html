@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Customize and order your solarsphere premium solar energy system. Select your starter, premium, or off-grid package and upgrades.">
+  <title>Configure Systems | solarsphere</title>
+  <link rel="stylesheet" href="styles.css?v=2.0">
+</head>
+<body>
+
+  <!-- Background Glowing Orbs -->
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">s</div>
+        <span>solarsphere</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="calculator.html">Savings Calculator</a></li>
+        <li><a href="configurator.html" class="active">Solar Systems</a></li>
+        <li><a href="visualizer.html">Energy Flow</a></li>
+        <li><a href="subsidies.html">Govt. Subsidies</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+      <a href="calculator.html" class="btn btn-secondary" style="padding: 0.6rem 1.5rem; font-size: 0.85rem;">Get Quick Quote</a>
+    </div>
+  </header>
+
+  <!-- PRODUCT CONFIGURATOR -->
+  <section class="configurator" id="configurator" style="min-height: 85vh; padding-top: 150px; padding-bottom: 180px;">
+    <div class="container">
+      <div class="section-header">
+        <h2>Choose Your Solar Setup</h2>
+        <p>Select a baseline package designed for your home profile, then add storage, smart controllers, or EV chargers to complete your system.</p>
+      </div>
+
+      <div class="catalog-grid">
+        <!-- Starter Package -->
+        <div class="glass-card catalog-card" id="package-starter">
+          <div class="card-tier">Tier 1</div>
+          <h3 class="card-title">Sphere Starter</h3>
+          <div class="card-price-container">
+            <span class="card-price">₹1,90,000</span>
+            <span class="card-price-sub">(est. ₹1,12,000 after subsidy)</span>
+          </div>
+          <p class="card-desc">Perfect for small homes, townhouses, or lower-energy households looking to enter solar energy.</p>
+          <ul class="card-features">
+            <li>3.0 kW Panel Output</li>
+            <li>8 Monocrystalline Panels</li>
+            <li>Single-Phase Hybrid Inverter</li>
+            <li>solarsphere Lite App Monitoring</li>
+            <li>12-Year Workmanship Warranty</li>
+          </ul>
+          <button class="btn btn-secondary btn-card" onclick="selectPackage('starter')">Select Package</button>
+        </div>
+
+        <!-- Premium Package -->
+        <div class="glass-card catalog-card popular" id="package-premium">
+          <div class="popular-badge">Most Popular</div>
+          <div class="card-tier" style="color: var(--solar-gold);">Tier 2</div>
+          <h3 class="card-title">Sphere Premium</h3>
+          <div class="card-price-container">
+            <span class="card-price">₹3,00,000</span>
+            <span class="card-price-sub">(est. ₹2,22,000 after subsidy)</span>
+          </div>
+          <p class="card-desc">Designed for typical single-family homes to eliminate 80-100% of their utility dependency.</p>
+          <ul class="card-features">
+            <li>5.0 kW Panel Output</li>
+            <li>12 High-Efficiency Panels</li>
+            <li>Smart Micro-Inverters</li>
+            <li>SphereOS Advanced Monitoring</li>
+            <li>25-Year Full-System Warranty</li>
+          </ul>
+          <button class="btn btn-primary btn-card" onclick="selectPackage('premium')">Select Package</button>
+        </div>
+
+        <!-- Off-Grid Elite Package -->
+        <div class="glass-card catalog-card" id="package-elite">
+          <div class="card-tier" style="color: var(--accent-purple);">Tier 3</div>
+          <h3 class="card-title">Sphere Elite Off-Grid</h3>
+          <div class="card-price-container">
+            <span class="card-price">₹5,80,000</span>
+            <span class="card-price-sub">(est. ₹5,02,000 after subsidy)</span>
+          </div>
+          <p class="card-desc">Maximum output for estates, high energy loads, or total off-grid energy independence.</p>
+          <ul class="card-features">
+            <li>10.0 kW Panel Output</li>
+            <li>24 Premium All-Weather Panels</li>
+            <li>Dual Smart Hybrid Inverters</li>
+            <li>SphereOS Elite + Cellular Backup</li>
+            <li>30-Year Performance Guarantee</li>
+          </ul>
+          <button class="btn btn-secondary btn-card" onclick="selectPackage('elite')">Select Package</button>
+        </div>
+      </div>
+
+      <!-- Addons Section -->
+      <div class="addons-section">
+        <h3>Power Upgrades & Accessories</h3>
+        <div class="addons-grid">
+          <!-- Addon 1: Battery -->
+          <div class="addon-card" id="addon-battery" onclick="toggleAddon('battery')">
+            <div class="addon-checkbox"></div>
+            <div class="addon-icon">🔋</div>
+            <div class="addon-info">
+              <h4>SphereCell Battery (10kWh)</h4>
+              <p>Keep your home powered overnight and during grid failures.</p>
+              <span class="addon-price">+₹2,20,000</span>
+            </div>
+          </div>
+
+          <!-- Addon 2: EV Charger -->
+          <div class="addon-card" id="addon-charger" onclick="toggleAddon('charger')">
+            <div class="addon-checkbox"></div>
+            <div class="addon-icon">⚡</div>
+            <div class="addon-info">
+              <h4>EV Smart Charger</h4>
+              <p>Charge your electric vehicle directly from the solar array.</p>
+              <span class="addon-price">+₹45,000</span>
+            </div>
+          </div>
+
+          <!-- Addon 3: Smart Panel -->
+          <div class="addon-card" id="addon-smartpanel" onclick="toggleAddon('smartpanel')">
+            <div class="addon-checkbox"></div>
+            <div class="addon-icon">📱</div>
+            <div class="addon-info">
+              <h4>Smart Energy Hub</h4>
+              <p>Advanced circuit control, sub-metering, and dynamic usage analytics.</p>
+              <span class="addon-price">+₹18,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <!-- Sticky Configurator Control Bar -->
+  <div class="configurator-sticky-bar">
+    <div class="container sticky-bar-container">
+      <div class="sticky-bar-info">
+        <div class="sticky-bar-item">
+          <span class="sticky-bar-label">Selected System</span>
+          <span class="sticky-bar-value" id="sticky-package-name" style="color: var(--color-text-main); font-size: 1.4rem;">Sphere Premium</span>
+        </div>
+        <div class="sticky-bar-item">
+          <span class="sticky-bar-label">Configured Total</span>
+          <span class="sticky-bar-value" id="total-system-price">₹3,00,000</span>
+        </div>
+        <div class="sticky-bar-item">
+          <span class="sticky-bar-label">Est. Subsidy Savings</span>
+          <span class="sticky-bar-saving-value" id="sticky-subsidy-saving">₹78,000</span>
+        </div>
+      </div>
+      <button class="btn btn-gold" style="padding: 1rem 2.5rem;" id="checkout-trigger-btn">Order & Book Installation</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <span>&copy; 2026 solarsphere Inc. All rights reserved. Designed for clean independence.</span>
+        <div class="footer-socials">
+          <a href="#">𝕏</a>
+          <a href="#">📷</a>
+          <a href="#">💼</a>
+          <a href="#">🎥</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js?v=2.0"></script>
+</body>
+</html>
